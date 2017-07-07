@@ -1,0 +1,23 @@
+package com.phil.overloading;
+
+/***
+ * Method names are the same but sequence of data types is different
+ * @author HOME
+ *
+ */
+
+public class PhilOverload3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void nameSameDiffOrder(String first, int second) {
+		System.out.println("First method executed, string then int " + first + " , " + second);
+	}
+	
+	public static void nameSameDiffOrder(int second, String first) {
+		System.out.println("First method executed, int then string " + second + " , " + first);
+	}
+}

@@ -1,0 +1,18 @@
+import javax.swing.JFrame;
+
+public class Objects {
+	public static void main(String[] args) {
+		int number = 5;
+		
+		// create a window
+		JFrame window = new JFrame();
+		
+		window.setTitle("My Window");
+		
+		window.setSize(800, 600);
+		
+		// set the visible property to true
+		window.setVisible(true);
+		
+	}
+}

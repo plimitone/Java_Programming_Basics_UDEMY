@@ -1,0 +1,85 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class Lesson41LinkedListDemo {
+
+	public static void main(String[] args) {
+		//the cars object can store 10 items in the array unless specified
+		LinkedList<String> cars = new LinkedList<String>();
+		
+		//add items to the list
+		cars.add("BMW");
+		cars.add("HONDA");
+		cars.add("Audi");
+		
+		//get the size of the array
+		int size = cars.size();
+		System.out.println("The size of the list is " + size);
+		
+		//get items from the array by index
+		System.out.println("The item on index 0 is " + cars.get(0));
+		//System.out.println("The item on index 1 is " + cars.get(1));
+		//System.out.println("The item on index 2 is " + cars.get(2));
+		
+		//instead of a println for each, use a loop to get and print the items
+		System.out.println("Get the items in the array with a loop");
+		for (int i = 0; i < size; i++) {
+			System.out.println("items on index " + i + " is " + cars.get(i));
+		}
+		
+		System.out.println("\nthe next for loop example");
+		for (String car: cars) {
+			System.out.println("the item is: " + car);
+		}
+		
+		//now we remove items from the array
+		cars.remove(size-1);
+		System.out.println("\nNext for loop example after removing");
+		for (String car : cars) {
+			System.out.println("The item is now "+ car);
+		}
+		
+		/**
+		 * Array list - {0, 1, 2, 3, 4, 5, 6}
+		 * Linked List - [0] > [1] > [2]
+		 * 					 <     <
+		 * Array List - for when you have to add to the end and remove from the end and getting is fast
+		 * 
+		 * Linked List - when you have to add at the beginning and remove from the beginning
+		 * 
+		 */
+		
+		List<Integer> lList = new LinkedList<Integer>();
+		List<Integer> aList = new ArrayList<Integer> ();
+		
+		runDuration(aList, "Array List");
+		runDuration(lList, "Linked List");
+	}
+	
+	public static void runDuration(List<Integer> list, String listType) {
+		System.out.println("\nBeginning of the duration method for " + listType);
+		
+		//now add items to the list
+		for (int i = 0; i < 100000; i++) {
+			list.add(i);
+		}
+		
+		//find the system time
+		long startTime = System.currentTimeMillis();
+		int size = list.size();
+		int elementToAdd = size + 100000;
+		for (int i = size; i < elementToAdd; i++) {
+			list.add(i);
+		}
+		
+		//find the system time when execution is done
+		long endTime = System.currentTimeMillis();
+		
+		//then find out the duration of the execution
+		long duration = endTime - startTime;
+		System.out.println("Duration of the list " + listType + " is " + duration + " ms");
+		
+	}
+}

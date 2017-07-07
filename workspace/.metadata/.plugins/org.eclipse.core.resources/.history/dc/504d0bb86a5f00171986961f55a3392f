@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		//the cars object can store 10 items in the array unless specified
+		ArrayList<String> cars = new ArrayList<String>();
+		
+		//add items to the list
+		cars.add("BMW");
+		cars.add("HONDA");
+		cars.add("Audi");
+		
+		int size = cars.size();
+		System.out.println("The size of the list is " + size);
+		
+
+	}
+
+}

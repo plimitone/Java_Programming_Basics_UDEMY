@@ -1,0 +1,22 @@
+package automobile;
+
+/***
+ * Difference in data type of the arguments
+ * @author HOME
+ *
+ */
+public class CarsOverloading2 {
+
+	public static void main(String[] args) {
+		increaseSeatHeight(2);
+		increaseSeatHeight("two");
+	}
+
+	public static void increaseSeatHeight(int heightToIncrease) {
+		System.out.println("Increased the height of the seat by " + heightToIncrease + " inches. I am the integer one");
+	}
+	
+	public static void increaseSeatHeight(String heightToIncrease) {
+		System.out.println("Increased the height of the seat by " + heightToIncrease + " inches. I am the String one");
+	}
+}

@@ -1,0 +1,27 @@
+package automobile;
+//Three ways top achieve method overloading
+//1. Different number of parameters in arguments list
+//2. Difference in data type of arguments
+//3. Difference in sequence of the data type of arguments
+
+/***
+ * Different number of parameters in arguments list
+ * @author HOME
+ *
+ */
+
+public class CarsOverladingQuestions {
+
+	public static void main(String[] args) {
+		increaseSeatHeight("2", 2);
+	}
+	 
+	public static void increaseSeatHeight(String variable1, int variable2) {
+		System.out.println("I am the first overload done");
+	}
+	
+	public static int increaseSeatHeight(String variable3, String variable4) {
+		System.out.println("I am the second overload done");
+		return 0;
+	}
+}

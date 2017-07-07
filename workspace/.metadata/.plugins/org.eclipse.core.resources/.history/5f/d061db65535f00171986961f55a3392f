@@ -1,0 +1,10 @@
+package automobile;
+
+public class CarsOverridingChildBMW {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

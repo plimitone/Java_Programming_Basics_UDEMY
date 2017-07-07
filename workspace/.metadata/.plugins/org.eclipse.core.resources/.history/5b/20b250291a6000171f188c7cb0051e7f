@@ -1,0 +1,34 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetsDemo {
+
+	public static void main(String[] args) {
+
+		Set<String> set = new HashSet<String>();
+		
+		set.add("BMW");
+		set.add("Audi");
+		set.add("Honda");
+		//add another item of the same name (this should NOT be allowed for a set, only UNIQUE values allowed
+		set.add("Honda");
+		
+		System.out.println("Print out the set/n");
+		System.out.println(set);
+		
+		List<String> list = new ArrayList<String>();
+		
+		list.add("BMW");
+		list.add("Audi");
+		list.add("Honda");
+		//add another item of the same name (allowed under list)
+		list.add("Honda");
+		
+		System.out.println("print out the list/n");
+		System.out.println(list);
+		
+	}
+
+}

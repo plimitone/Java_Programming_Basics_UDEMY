@@ -1,0 +1,30 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapsDemo {
+
+	public static void main(String[] args) {
+
+		//stores in pairs, key value pairs (1 key value pair is one entry), a map can have many of these entries
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		
+		//add items to the map
+		map.put(1, "BMW");
+		map.put(6, "Audi");
+		map.put(4, "Honda");
+		
+		String value1 = map.get(1);
+		System.out.println(value1);
+		
+		String value2 = map.get(2);
+		System.out.println("nothing to return, key is invalid, null result");
+		System.out.println(value2);
+		
+		
+		//Keys are unique, values can be duplicated
+		map.put(2, "BMW");
+		String value3 = map.get(2);
+		System.out.println(value3);
+	}
+
+}

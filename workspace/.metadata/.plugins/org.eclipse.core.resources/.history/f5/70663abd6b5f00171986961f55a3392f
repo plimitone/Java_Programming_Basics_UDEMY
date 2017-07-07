@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		//the cars object can store 10 items in the array unless specified
+		ArrayList<String> cars = new ArrayList<String>();
+		
+		//add items to the list
+		cars.add("BMW");
+		cars.add("HONDA");
+		cars.add("Audi");
+		
+		//get the size of the array
+		int size = cars.size();
+		System.out.println("The size of the list is " + size);
+		
+		//get items from the array by index
+		System.out.println("The item on index 0 is " + cars.get(0));
+		//System.out.println("The item on index 1 is " + cars.get(1));
+		//System.out.println("The item on index 2 is " + cars.get(2));
+		
+		//instead of a println for each, use a loop to get and print the items
+		System.out.println("Get the items in the array with a loop");
+		for (int i = 0; i < size; i++) {
+			System.out.println("items on index " + i + " is " + cars.get(i));
+		}
+		
+		System.out.println("\nthe next for loop example");
+		for (String car: cars) {
+			System.out.println("the item is: " + car);
+		}
+	}
+
+}

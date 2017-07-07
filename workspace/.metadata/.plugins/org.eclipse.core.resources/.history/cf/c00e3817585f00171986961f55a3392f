@@ -1,0 +1,17 @@
+import java.sql.SQLException;
+
+public class ExeptionDemo {
+
+	public static void main(String[] args) {
+
+		Account acc = new Account();
+		try {
+			acc.withdraw(100);
+		} catch (SQLException e) {
+			//e.printStackTrace();
+			//System.out.println(e.getMessage());
+			System.out.println("Try again later, server not accessible");
+		}
+	}
+
+}
